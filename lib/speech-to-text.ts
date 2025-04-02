@@ -1,9 +1,9 @@
 "use server"
-require('dotenv').config()
+dotenv.config();
 
 import { createClient } from "@deepgram/sdk";
-import { log } from "console";
 import fs from "fs";
+import dotenv from 'dotenv';
 
 
 
@@ -16,7 +16,6 @@ export const transcribeFile = async (file: File) => {
         const deepgram = createClient(process.env.DEEPGRAM_API_KEY);
 
         const { result, error } = await deepgram.listen.prerecorded.transcribeFile(
-
             fs.readFileSync("recording.mp3"),
 
             {
@@ -24,13 +23,13 @@ export const transcribeFile = async (file: File) => {
                 smart_format: true,
             }
         );
-
+        console.log(error);
         return {
             success: true,
             message: result!.results.channels[0].alternatives[0].transcript,
         };
     } catch (error) {
-        log("error", error)
+        console.log("Error transcribing file:", error);
     }
 
     return {
