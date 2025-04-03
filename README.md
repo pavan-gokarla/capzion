@@ -4,6 +4,7 @@ Capzion is a web application that allows users to upload audio files and transcr
 
 ## Features
 
+- Secure authentication using Google Providers
 - Upload audio files for transcription.
 - Transcribe audio files into text using the Deepgram API.
 - Download the transcription as a `.txt` file.
