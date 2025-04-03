@@ -31,13 +31,13 @@ Capzion is a web application that allows users to upload audio files and transcr
    ```bash
    npm install
 
-3.Create a .env file in the root directory and add the following environment variable:
+3. Create a .env file in the root directory and add the following environment variable:
    ```bash
    DEEPGRAM_API_KEY=your_deepgram_api_key
    ```
 
 
-4.Start the development server:
+4. Start the development server:
    ```bash
    npm run dev
    ```
