@@ -1,12 +1,11 @@
 
-import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ClipLoader from "react-spinners/ClipLoader";
 import { uploadAudio } from "@/actions/uploadAudio"
 
 import { FileUpload } from './file-upload'
 import { Button } from './button'
 import { toast } from 'sonner';
-import { Link } from 'lucide-react';
 
 const FileManage = () => {
     const [file, setFile] = useState<File | null>(null)
@@ -23,7 +22,7 @@ const FileManage = () => {
                 URL.revokeObjectURL(downloadUrl)
             }
         }
-    }, [transcriptFile])
+    }, [transcriptFile, downloadUrl])
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="upload-audio">
