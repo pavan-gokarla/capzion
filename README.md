@@ -12,6 +12,7 @@ Capzion is a web application that allows users to upload audio files and transcr
 
 ## Technologies Used
 
+- **Authentiaction**: AuthJs(beta)
 - **Frontend**: React, TypeScript, TailwindCSS
 - **Backend**: Next.js (Server Actions)
 - **API**: Deepgram API
